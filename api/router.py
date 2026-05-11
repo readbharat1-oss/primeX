@@ -3,8 +3,16 @@ from pydantic import BaseModel
 from typing import List, Optional
 import uuid
 import time
-from services.vision import analyze_face_image
-from services.report import generate_pdf_report
+try:
+    from api.services.vision import analyze_face_image
+    from api.services.report import generate_pdf_report
+except ImportError:
+    try:
+        from services.vision import analyze_face_image
+        from services.report import generate_pdf_report
+    except ImportError:
+        from .services.vision import analyze_face_image
+        from .services.report import generate_pdf_report
 from fastapi.responses import Response
 
 api_router = APIRouter()
