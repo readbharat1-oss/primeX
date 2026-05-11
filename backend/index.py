@@ -1,12 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-try:
-    from backend.router import api_router
-except ImportError:
-    try:
-        from router import api_router
-    except ImportError:
-        from .router import api_router
+from router import api_router
 
 app = FastAPI(
     title="PrimeLens AI API",

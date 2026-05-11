@@ -24,12 +24,8 @@ def analyze_face_image(image_bytes: bytes) -> dict:
     Performs real facial landmark analysis using MediaPipe.
     Calculates symmetry, jawline, harmony, face shape, eye tilt, and cheek prominence.
     """
-    # Initialize MediaPipe Face Mesh locally for serverless stability
-    try:
-        mp_face_mesh = mp.solutions.face_mesh
-    except AttributeError:
-        # Fallback for certain library versions
-        import mediapipe.python.solutions.face_mesh as mp_face_mesh
+    # Initialize MediaPipe Face Mesh with most stable import method
+    import mediapipe.solutions.face_mesh as mp_face_mesh
     
     with mp_face_mesh.FaceMesh(
         static_image_mode=True,
