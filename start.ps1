@@ -16,7 +16,7 @@ Write-Host "--- Launching PrimeLens AI Full Stack ---" -ForegroundColor Magenta
 
 # Start Backend
 Write-Host "1. Starting FastAPI Vision Engine on http://localhost:8001..." -ForegroundColor Cyan
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd api; .\venv\Scripts\Activate.ps1; uvicorn index:app --reload --port 8001"
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd backend; .\venv\Scripts\Activate.ps1; uvicorn index:app --reload --port 8001"
 
 # Start Frontend
 Write-Host "2. Starting Next.js Frontend on http://localhost:3000..." -ForegroundColor Green

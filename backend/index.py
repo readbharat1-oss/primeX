@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 try:
-    from api.router import api_router
+    from backend.router import api_router
 except ImportError:
     try:
         from router import api_router

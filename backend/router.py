@@ -4,8 +4,8 @@ from typing import List, Optional
 import uuid
 import time
 try:
-    from api.services.vision import analyze_face_image
-    from api.services.report import generate_pdf_report
+    from backend.services.vision import analyze_face_image
+    from backend.services.report import generate_pdf_report
 except ImportError:
     try:
         from services.vision import analyze_face_image
