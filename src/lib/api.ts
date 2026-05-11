@@ -3,7 +3,7 @@
 // ─────────────────────────────────────────────────────────────
 
 // LOCAL BACKEND
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://primelens-api.onrender.com/api/v1";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://primex-4.onrender.com/api/v1";
 
 // ─────────────────────────────────────────────────────────────
 // TYPES
